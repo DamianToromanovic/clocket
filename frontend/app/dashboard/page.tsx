@@ -1,5 +1,6 @@
 // app/dashboard/page.tsx
 import Link from "next/link";
+import DashboardCard from "@/components/DashboardCards";
 
 export default function DashboardPage() {
   return (
@@ -32,25 +33,5 @@ export default function DashboardPage() {
         />
       </div>
     </section>
-  );
-}
-
-function DashboardCard({
-  title,
-  href,
-  description,
-}: {
-  title: string;
-  href: string;
-  description: string;
-}) {
-  return (
-    <Link
-      href={href}
-      className="border rounded-xl p-6 hover:bg-gray-50 transition shadow-sm"
-    >
-      <h2 className="text-xl font-semibold">{title}</h2>
-      <p className="text-sm text-gray-600 mt-2">{description}</p>
-    </Link>
   );
 }
